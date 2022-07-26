@@ -9,11 +9,11 @@ Console.WriteLine("Введите М");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите N");
 int n = Convert.ToInt32(Console.ReadLine());
-Accerman(m,n);
+Console.Write(Accerman (m , n));
 
 int Accerman (int m , int n)
 {
-    if ( m < 0 && n < 0) return 1;
+    if ( m < 0 ||  n < 0) return 0;
     else
     if (m == 0)
     {
@@ -25,9 +25,8 @@ int Accerman (int m , int n)
         return Accerman(m - 1, 1);
     }
     else
-    if (m > 0 && n > 0)
     {
         return Accerman(m-1, Accerman(m, n - 1));
-     }
-    Console.Write(Accerman(m,n));
+    }
 }
+
